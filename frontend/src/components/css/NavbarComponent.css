@@ -1,0 +1,154 @@
+.navbarbox {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 0%;
+  height: 12vh;
+  width: 100%;
+  background: var(--secondary_color);
+}
+.logo {
+  font-size: 4rem;
+  line-height: 1;
+  font-weight: 700;
+  color: var(--tertiary_color);
+}
+.menubox {
+  display: flex;
+  flex-direction: row;
+  flex: 1 1 0%;
+  justify-content: flex-end;
+  height: 100%;
+}
+.navbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  border: none;
+  background: none;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+.navbox:hover {
+  background: #3f5941;
+  transition: background-color 0.3s ease;
+}
+.navtext {
+  font-family:
+    Krona One,
+    Helvetica,
+    sans-serif; /* Equivalent to font-sans */
+  color: var(--tertiary_color); /* Custom text color */
+  font-size: 1.3rem; /* Default size for sm */
+}
+
+.navtext.underline {
+  text-decoration: underline;
+}
+
+.logobutton {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: none;
+  outline: none;
+  border: none;
+  margin-left: 1%;
+}
+
+.hamburger {
+  background: none;
+  border: none;
+  stroke: var(--tertiary_color);
+  display: none;
+  cursor: pointer;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+.hamburger:hover {
+  background: #3f5941;
+}
+
+/* Responsive design */
+@media (max-width: 750px) {
+  .hamburger {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .navbox {
+    display: none;
+  }
+}
+
+/* Dropdown Styling */
+.dropdown {
+  position: absolute;
+  background-color: var(--secondary_color); /* Use your secondary color */
+  min-width: 180px; /* Slightly increase the width */
+  z-index: 1000; /* Ensure it stays on top */
+  top: 12vh;
+
+  border-bottom-left-radius: 12px; /* Round all corners */
+  overflow: hidden; /* Ensures items fit within the dropdown */
+  opacity: 0; /* Hidden by default */
+  transform: translateY(-20px); /* Start a little off-screen for animation */
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease; /* Smooth transition */
+}
+
+/* Show the dropdown when isDropdownOpen is true */
+.dropdown {
+  opacity: 1; /* Make visible */
+  transform: translateY(0); /* Slide it down into view */
+}
+
+/* Dropdown items */
+.dropdown-item {
+  display: block;
+  width: 100%;
+  padding: 15px 20px; /* Add padding for better spacing */
+  background-color: var(--secondary_color);
+  color: var(--tertiary_color);
+  text-align: center;
+  font-size: 1.5rem; /* Set to a more standard font size */
+  font-family: 'Krona One', Helvetica, sans-serif;
+  cursor: pointer;
+  transition: background-color 0.2s ease; /* Add a smooth hover transition */
+  border: none;
+}
+
+/* Rounded corners for the last dropdown item */
+.dropdown-item:last-child {
+  border-bottom-left-radius: 12px;
+}
+
+/* Hover effects for dropdown items */
+.dropdown-item:hover {
+  background-color: #3f5941; /* Hover background color */
+  color: #fff; /* Change text color on hover */
+}
+
+.dropdown-item {
+  font-family: 'Krona One', Helvetica, sans-serif;
+}
+
+/* Optional: Add smooth transition when dropdown is displayed */
+.dropdown {
+  animation: fadeInDropdown 0.4s ease;
+}
+
+@keyframes fadeInDropdown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

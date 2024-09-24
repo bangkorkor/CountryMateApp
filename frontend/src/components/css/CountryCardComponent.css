@@ -1,0 +1,134 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.countrycard {
+  background-color: var(--secondary_color);
+  border-radius: 20px;
+  padding: 2vh 5vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  width: 80vw;
+  max-width: 600px; /* Set a max width for larger screens */
+  box-sizing: border-box;
+  position: relative;
+}
+
+.closecountrycardbutton {
+  border: none;
+  border-radius: 10px;
+  width: 40px;
+  height: 40px;
+  background-color: var(--secondary_color);
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.closecountrycardbutton:hover {
+  transform: scale(1.1);
+}
+
+.closeimage {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+}
+
+.countryheader {
+  margin-bottom: 5%;
+  font-size: 2.5rem;
+  margin-top: 3%;
+  text-align: center;
+}
+
+.flagimage {
+  width: 60vw;
+  height: auto;
+  max-width: 300px;
+  margin: 20px 0; /* Margin above and below the flag */
+  object-fit: contain;
+}
+
+.countryinfo {
+  display: grid;
+  grid-template-columns: 1fr; /* Two columns: one for label, one for value */
+  column-gap: 10px; /* Spacing between the label and value columns */
+  row-gap: 5px; /* Spacing between rows */
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-top: 5%;
+  width: 100%; /* Ensure full width for alignment */
+}
+
+.countryinfo p {
+  margin: 0;
+  padding-left: 20%;
+  padding-right: 20%;
+  display: flex; /* Flexbox to handle the label-value positioning */
+  justify-content: space-between; /* Spread the label and value */
+}
+
+.countryinfo .label {
+  text-align: right; /* Align label (e.g., Capital) to the right */
+}
+
+.countryinfo .value {
+  text-align: left; /* Align value (e.g., the actual capital) to the left */
+}
+
+/* Media Queries for smaller screens */
+@media (max-width: 768px) {
+  .countryheader {
+    font-size: 2rem;
+  }
+
+  .flagimage {
+    width: 70vw;
+    max-width: 250px;
+  }
+
+  .countryinfo {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .countrycard {
+    width: 90vw;
+    padding: 3vh 3vw;
+  }
+
+  .closecountrycardbutton {
+    width: 25px;
+    height: 25px;
+  }
+
+  .countryheader {
+    font-size: 1.8rem;
+  }
+
+  .flagimage {
+    width: 80vw;
+    max-width: 200px;
+  }
+
+  .countryinfo {
+    font-size: 0.9rem;
+  }
+}

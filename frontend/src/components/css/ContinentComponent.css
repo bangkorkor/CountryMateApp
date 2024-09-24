@@ -1,0 +1,36 @@
+.ContinentCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+  margin-top: 3%;
+  border-radius: 20px;
+  background-color: var(--secondary_color);
+  width: 80%;
+  height: 90%;
+  margin: 2%;
+  overflow: hidden;
+}
+
+.ContinentCard:hover {
+  background-color: var(--tertiary_color);
+  cursor: pointer;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+  transform: scale(1.05); /* Slightly enlarge on hover */
+  transition: background-color 0.3s ease; /* Add a smooth hover transition */
+  transition:
+    background-color 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.ContinentHeading {
+  font-size: 30px;
+  font-weight: bold;
+  color: 'black';
+}
+
+.ContinentPicture {
+  height: 70%;
+  transform: scale(0.8);
+}

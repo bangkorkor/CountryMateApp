@@ -1,0 +1,24 @@
+.star-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    outline: none;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+  }
+  
+  .star-icon {
+    width: 28px;
+    height: 28px;
+    stroke: black;
+    transition: fill 0.3s;
+    overflow: visible
+  }
+  
+  .star-button.favorited .star-icon {
+    fill: #f8c635;
+    stroke: #f8c635;
+  }
+  

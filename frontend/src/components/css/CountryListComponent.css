@@ -1,0 +1,46 @@
+body {
+  overflow: hidden;
+}
+
+.fullList {
+  padding: 2%;
+  max-height: 80%;
+  height: 80%;
+  width: 90%;
+  overflow-y: scroll;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  list-style: none;
+}
+
+.listItem {
+  border: 0px solid var(--quaternary_color);
+  border-radius: 8px;
+  background-color: var(--secondary_color);
+  color: black;
+  font-weight: 550;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2%;
+  position: relative;
+}
+
+.listItem:hover {
+  background-color: var(--tertiary_color);
+  cursor: pointer;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+  transform: scale(1.05); /* Slightly enlarge on hover */
+  transition:
+    background-color 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.countryHeader {
+  margin-top: 0;
+  font-size: x-large;
+}

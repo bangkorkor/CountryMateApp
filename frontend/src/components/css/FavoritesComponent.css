@@ -1,0 +1,23 @@
+body {
+    overflow: hidden;
+  }
+.entireList {
+    padding: 0;
+    max-height: 70%;
+    width: 40%;
+    overflow:hidden; 
+    overflow-y:scroll;
+}
+.listItems {
+    border: 3px solid var(--secondary_color);
+    padding: 10px;
+    margin: 20px;
+    border-radius: 8px;
+    list-style: none;
+    background-color: var(--tertiary_color);
+    color: black;
+    font-weight: 550;
+}
+.favoritesHeader {
+    font-size: x-large;
+}
